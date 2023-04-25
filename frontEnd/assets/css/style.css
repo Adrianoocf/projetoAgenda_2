@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+:root{
+    --primaryColor :rgb(13, 106, 134);
+    --secondColor:  rgb(82, 137, 156);
+    --ok : green;
+    --nOk : red;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: var(--primaryColor);
+    margin: 10px;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+.botaoTarefa{
+    background-color: rgb(194, 193, 193);
+    border : 1px solid rgb(144, 144, 144);
+    color: rgb(0, 0, 0);
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 100%;
+    width: 47px;
+    height: 47px;
+    margin: 6px 4px 6px 4px;
+}
+
+.botaoC{
+    background-color: rgb(255, 154, 91);
+    border : 1px solid rgb(144, 144, 144);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.botaoTarefa:hover{
+    background-color: rgb(190, 201, 223);
+    border : 1px solid rgb(72, 71, 71);
+}
+
+.conteudo{
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+    width: 295px;
+    margin: auto;
+    margin-top: 12px;
+    background-color: rgb(49, 48, 48);
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 4px;
+    width: 295px;
+    line-height: 78px;
+    font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input{
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid rgb(173, 173, 173);
+    font-size: 1.7em;
+    margin: 5px 0px 15px 0px;
+    padding: 5px 15px 5px 0;
+    text-align: right;
+    width: 100%;
+    
+}
+
+.displayResultadoPositivo{
+    color:rgb(10, 167, 28);
+}
+
+.displayResultadoNegativo{
+    color:rgb(222, 55, 55);
+}
