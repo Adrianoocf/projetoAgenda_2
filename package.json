@@ -20,11 +20,13 @@
     "webpack-cli": "^5.0.2"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.13.11",
-    "style-loader": "^3.3.2",
     "core-js": "^3.30.1",
     "css-loader": "^6.7.3",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "regenerator-runtime": "^0.13.11",
+    "style-loader": "^3.3.2"
   }
 }
