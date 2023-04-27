@@ -31,15 +31,35 @@ console.log(p1)
 
 /*
 
- "devDependencies": {
+ {
+  "name": "webpack_professor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -w",
+    "start": "nodemon server.js --ignore public --ignore frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
     "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "babel-loader": "^9.1.2",
-    "core-js": "^3.30.1",
-    "css-loader": "^6.7.3",
+    "nodemon": "^2.0.22",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "dependencies": {
     "regenerator-runtime": "^0.13.11",
     "style-loader": "^3.3.2",
-    "webpack": "^5.79.0",
-    "webpack-cli": "^5.0.1"
+    "core-js": "^3.30.1",
+    "css-loader": "^6.7.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
 
 */
