@@ -1,94 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-
-:root{
-    --primaryColor :rgb(13, 106, 134);
-    --secondColor:  rgb(82, 137, 156);
-    --ok : green;
-    --nOk : red;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
 }
 
 * {
-    box-sizing: border-box;
-    outline: 0;
-    font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  outline: 0;
 }
 
-body{
-    background-color: var(--primaryColor);
-    margin: 10px;
-    padding: 10px;
-    line-height: 1.5em;
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
 }
 
-.botaoTarefa{
-    background-color: rgb(194, 193, 193);
-    border : 1px solid rgb(144, 144, 144);
-    color: rgb(0, 0, 0);
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 100%;
-    width: 47px;
-    height: 47px;
-    margin: 6px 4px 6px 4px;
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.botaoC{
-    background-color: rgb(255, 154, 91);
-    border : 1px solid rgb(144, 144, 144);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.botaoTarefa:hover{
-    background-color: rgb(190, 201, 223);
-    border : 1px solid rgb(72, 71, 71);
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
 }
 
-.conteudo{
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    padding: 20px 30px 20px 30px;
-    width: 295px;
-    margin: auto;
-    margin-top: 12px;
-    background-color: rgb(49, 48, 48);
+form input:focus {
+  outline: 1px solid var(--primary-color);
 }
 
-h1 {
-    color: black;
-    text-align: center;
-    background-color: white;
-    border-radius: 4px;
-    margin: auto;
-    margin-top: 4px;
-    width: 295px;
-    line-height: 78px;
-    font-weight: bold;
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-input{
-    border-radius: 3px;
-    background-color: white;
-    border: 1px solid rgb(173, 173, 173);
-    font-size: 1.7em;
-    margin: 5px 0px 15px 0px;
-    padding: 5px 15px 5px 0;
-    text-align: right;
-    width: 100%;
-    
-}
-
-.displayResultadoPositivo{
-    color:rgb(10, 167, 28);
-}
-
-.displayResultadoNegativo{
-    color:rgb(222, 55, 55);
+form button:hover {
+  background: var(--primary-color-darker);
 }
