@@ -1,0 +1,5 @@
+<% comandos %> 
+<%= imprime escapando carateres %> 
+<%- imprimie sem escapar caracteres %>
+<%# comentarios %> 
+<%- include('Pasta/arquivo.ejs) ; %>

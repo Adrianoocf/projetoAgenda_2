@@ -3,8 +3,8 @@ exports.paginaInicial = (req, res) => {
     // console.log(req.session.usuario);
     
     res.render('index', {
-        titulo: 'Este sera o titulo da pagina',
-        numeros: [0,1,2,3,4,5,6,7,8,9]
+        titulo: 'Este será o título da pagina',
+        numeros: [0,1,2,3,4]
     });
     return;
 };
