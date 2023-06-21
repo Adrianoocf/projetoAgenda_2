@@ -17,8 +17,8 @@ mongoose
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
-const path = require('path');
 const routes = require('./routes');
+const path = require('path');
 const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middleware/middleware'); 
@@ -29,7 +29,7 @@ app.use(express.static(path.resolve(__dirname,'public')))
 
 const sessionOptions = session({
     secret: 'kfçlsmfsmfl',
-    store: MongoStore.create({ mongoUrl: urlConnection  }),
+    store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
     resave: false,
     saveUninitialized: false,
     cookie: {
