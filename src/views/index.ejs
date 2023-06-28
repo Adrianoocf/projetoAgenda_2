@@ -1,28 +1,31 @@
 <%- include('includes/head'); %>
-<section class="container">
-    <h1>
-        <div style="text-align: center">
-            <% if(titulo !== 'undefined') { %>
-                <%= titulo %>
-            <% } else { %>
-                Informe o título no homeController
-            <% } %>
-            <br>
-            <%= umaVariavelLocal %>
+<%- include('includes/nav'); %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 my-3">
+                <h1 class="text-center my-3">Agenda</h1>
+                <p class="text-center lead my-3">Seus contatos estão abaixo</p>
+          
+                <div class="responsive-table my-4">
+                    <table class="table">
+                        <tr>
+                            <td>Adriano</td>
+                            <td>11995172741</td>
+                        </tr><tr>
+                            <td>Adriano</td>
+                            <td>11995172741</td>
+                        </tr><tr>
+                            <td>Adriano</td>
+                            <td>11995172741</td>
+                        </tr><tr>
+                            <td>Adriano</td>
+                            <td>11995172741</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
         </div>
-    </h1>
-    <h2>
-        <div style="text-align: center">
-            <% for(let i = 0 ; i <= numeros.length ; i++) { %>
-              <%= numeros[i]%> <br>
-            <%}; %>
-        </div>
-    </h2>
-    <form action="/" method="post">
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <label>Cliente</label>
-        <input type="text" name="cliente">
-        <button>Enviar</button>
-    </form>
-</section>
+    </div>
 <%- include('includes/footer'); %>

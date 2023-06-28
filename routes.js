@@ -1,14 +1,15 @@
 const express = require('express');
 const route = express.Router();
 const homeController = require('./src/controllers/homeController');
-const contatoController = require('./src/controllers/contatoController');
+const loginController = require('./src/controllers/loginController');
  
 // rota da home
-route.get('/', homeController.paginaInicial); 
-route.post('/', homeController.trataPost); 
+route.get('/', homeController.index); 
 
-// route.get('/teste/:idUsuarios?/:parametro?', homeController.parametro); 
-// rota de contato
-route.get('/contato', contatoController.contato); 
- 
+// rotas de login
+route.get('/login/index', loginController.index); 
+route.post('/login/register', loginController.register); 
+route.post('/login/login', loginController.login); 
+route.post('/login/logout', loginController.logout); 
+
 module.exports = route;

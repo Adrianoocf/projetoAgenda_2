@@ -1,6 +1,8 @@
 exports.middlewareGlobal = (req, res, next) => {
     console.log('Entrou no middleware.');
-    res.locals.umaVariavelLocal = 'Este e o valor da variavel local.'
+    res.locals.errors = req.flash('errors');
+    res.locals.success = req.flash('success');
+    res.locals.user = req.session.user;
     next();
 };
 
@@ -9,10 +11,11 @@ exports.outroMiddleware = (req, res, next) => {
 };
 
 exports.checkCsrfError = (err, req, res, next) => {
-    if(err && 'EBADCSRFTOKEN' === err.code){
+    if(err){
         console.log('Erro');
         return res.render('404');
     }
+    next();
 };
 
 exports.csrfMiddleware = (req, res, next) => {

@@ -1,7 +1,7 @@
 const path = require('path');
  
 module.exports = {
-    mode: 'production', // development ou production 
+    mode: 'development', // development ou production 
     // o arquivo bundle fica em uma unica linha no modo production
     entry: './frontEnd/main.js',
     output: {
