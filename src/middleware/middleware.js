@@ -24,3 +24,14 @@ exports.csrfMiddleware = (req, res, next) => {
     next();
 }
 
+
+exports.loginRequired = (req, res, next) => {
+    console.log('login efetuado');
+    if(!req.session.user){
+        req.flash('errors','Você não está logado.')
+        req.session.save(() => res.redirect('/'));
+        return;
+    }
+    next();
+}
+

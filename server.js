@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const urlConnection = process.env.CONNECTIONSTRING
 const config = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    // useFindAndModify: false
 }
 
 mongoose
@@ -24,6 +25,7 @@ const csrf = require('csurf');
 const { middlewareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middleware/middleware'); 
 console.log('passou')
 app.use(helmet());
+app.use(helmet.referrerPolicy({policy: ["origin", "unsafe-url"]}));
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.resolve(__dirname,'public')))
 
@@ -49,9 +51,9 @@ app.use(csrfMiddleware);
 app.use(routes);
  
 app.on('pronto', () => {
-    app.listen(3000,() => {
-        console.log('Acessar http://localhost:3000');
-        console.log('Servidor executando na porta 3000');
+    app.listen(4200,() => {
+        console.log('Acessar http://localhost:4200');
+        console.log('Servidor executando na porta 4200');
     });
 });
  
